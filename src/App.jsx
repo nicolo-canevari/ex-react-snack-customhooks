@@ -22,18 +22,36 @@
 
 // SNACK 2
 
-import useDate from "./useDate";
+// import useDate from "./useDate";
+
+// function App() {
+//   // Otteniamo la data corrente dal nostro custom hook
+//   const currentDate = useDate();
+
+//   return (
+//     <div>
+//       <h1>Data e ora attuali:</h1>
+
+//       {/* Visualizziamo la data in formato leggibile */}
+//       <p>{currentDate.toLocaleString()}</p>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+// SNACK 3
+
+import useCustomPointer from "./useCustomPointer";
 
 function App() {
-  // Otteniamo la data corrente dal nostro custom hook
-  const currentDate = useDate();
+  const customPointer = useCustomPointer("🔥");
 
   return (
     <div>
-      <h1>Data e ora attuali:</h1>
-
-      {/* Visualizziamo la data in formato leggibile */}
-      <p>{currentDate.toLocaleString()}</p>
+      <h1>Segui il fuoco col cursore!</h1>
+      {customPointer}
     </div>
   );
 }
