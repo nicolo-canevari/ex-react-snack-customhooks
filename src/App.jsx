@@ -43,15 +43,33 @@
 
 // SNACK 3
 
-import useCustomPointer from "./useCustomPointer";
+// import useCustomPointer from "./useCustomPointer";
+
+// function App() {
+//   const customPointer = useCustomPointer("🔥");
+
+//   return (
+//     <div>
+//       <h1>Segui il fuoco col cursore!</h1>
+//       {customPointer}
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+// BONUS
+
+import useKeyPress from "./useKeyPress";
 
 function App() {
-  const customPointer = useCustomPointer("🔥");
+  const isEnterPressed = useKeyPress("Enter");
 
   return (
     <div>
-      <h1>Segui il fuoco col cursore!</h1>
-      {customPointer}
+      <h1>Tieni premuto "Enter" per testare il custom hook</h1>
+      <p>{isEnterPressed ? "Enter premuto! ✅" : "Aspettando input... ⌨️"}</p>
     </div>
   );
 }
